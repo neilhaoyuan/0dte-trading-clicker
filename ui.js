@@ -63,7 +63,7 @@ function generateOptions(gameLogic){
 
         // Building the purchase button and adding click feedback that calls the options buying
         const button = document.createElement('button');
-        button.textContent = 'Strike ' + randomStrike + ' | ' + (randomExpiry/3600) + 'hour | $' + callPrice.toFixed(2);
+        button.textContent = 'Strike ' + randomStrike + ' | ' + (randomExpiry/3600) + ' hour | $' + callPrice.toFixed(2);
         button.addEventListener('click', function() {
             if (gameLogic.cash >= callPrice){
                 gameLogic.cash -= callPrice;
