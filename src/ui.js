@@ -313,7 +313,7 @@ gameOverQuotes = [
     '"I am not a cat."',
     '"Funding secured."',
     '"What\'s theta decay?"',
-    "'Rule No.1: Never lose money. Rule No.2: Never forget rule No.1.'",
+    '"Rule No.1: Never lose money. Rule No.2: Never forget rule No.1."',
     '"What\'s hedging?"',
     '"We like the stock"'
 ];
@@ -321,7 +321,7 @@ gameOverQuotes = [
 // Updates the game over screen
 function showGameOver(cash, level) {
     // Update the stats and then shows the screen
-    document.getElementById('final-cash').textContent = "Final Cash: " + cash.toFixed(2);
+    document.getElementById('final-cash').textContent = "Final Cash: $" + cash.toFixed(2);
     document.getElementById('final-level').textContent = "Final Level: " + level;
     document.getElementById('game-over-screen').style.display = 'flex';
     document.getElementById('game-over-quote').textContent = gameOverQuotes[Math.floor(Math.random() * gameOverQuotes.length)];
