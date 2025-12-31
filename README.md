@@ -6,6 +6,7 @@ A fun educational clicker game where you can purchase 0DTE call and put options.
 
 
 <br>
+
 Features
 
 - Pricing and stock movement are calculated using Black Scholes and Geometric Brownian Motion to simulate real-life
