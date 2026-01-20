@@ -46,6 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // Give up button
     document.getElementById('give-up-button').addEventListener('click', function() {
         const gameState = game.getUserState();
+        localStorage.removeItem('optionsGameState'); 
         showGameOver(gameState.cash, gameState.level);
     });
 
