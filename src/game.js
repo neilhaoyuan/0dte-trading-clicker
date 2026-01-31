@@ -141,7 +141,6 @@ class GameLogic {
             saveGame(this);
             return true;
         }
-        // If unable to buy it, return false
         else{
             saveGame(this);
             return false;
@@ -166,7 +165,7 @@ class GameLogic {
     tick(){
         const SEC_PER_TICK = 900;  // 8 in-game minutes per tick
 
-        this.stock.tick(); // Update stock price 
+        this.stock.tick(); // Update stock price
 
         // Loop through all activeOptions 
         for (let i = 0; i < this.activeOptions.length; i++){
@@ -186,6 +185,7 @@ class GameLogic {
 
         // Removes settled option from list
         this.activeOptions = this.activeOptions.filter(curOpt => curOpt.timeLeft > 0);
+        saveGame(this);
     }
 
     // Returns the user's current status

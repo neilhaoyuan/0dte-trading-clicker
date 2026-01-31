@@ -1,6 +1,5 @@
-// Create game instance, also load any previous saves
+// Create game instance
 let game = new GameLogic();
-loadGame(game);
 let previousPrice = game.stock.getPrice();
 let priceHistory = [game.stock.getPrice()]; // Store price history for chart
 
@@ -37,9 +36,10 @@ window.addEventListener('DOMContentLoaded', function() {
     // Setup music toggle
     const musicControl = setupMusicToggle(bgMusic);
     
-    // Start game and music after clicking start game button
+    // Start game and music after clicking start game button, load any previous saves
     document.getElementById('start-button').addEventListener('click', function() {
         document.getElementById('start-screen').style.display = 'none';
+        loadGame(game);
         loadTrack(0);
     });
 
